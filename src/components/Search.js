@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "./search.css";
 const Search = () => {
   const [username, setUserName] = useState("");
 
@@ -25,16 +25,14 @@ const Search = () => {
   };
 
   const showData = (data) => {
-    return (
-      <div>
-        <ul>
-          {data.map((data) => {
-            return <li key={data.id}>{data.name}</li>;
-          })}
-        </ul>
-      </div>
-    );
+    data.map((data) => {
+      console.log(data.name);
+    });
   };
+
+  const dataArray = showData;
+
+  console.log(dataArray);
 
   return (
     <div>
@@ -47,7 +45,7 @@ const Search = () => {
         Search
       </button>
 
-      <div className="content">{showData}</div>
+      <div className="content"></div>
     </div>
   );
 };
