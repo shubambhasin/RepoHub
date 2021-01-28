@@ -20,3 +20,19 @@ button {
 button:hover {
   box-shadow: 5px 5px 8px #ff3d61 inset, -5px -5px 8px #000;
 }
+
+@media (max-width: 345px) {
+  .input {
+    width: 150px;
+  }
+}
+@media (max-width: 300px) {
+  .input {
+    margin: 2px;
+    border-radius: 5px;
+    font-size: 10px;
+  }
+  button {
+    font-size: 10px;
+  }
+}

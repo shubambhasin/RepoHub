@@ -8,11 +8,13 @@ const Search = () => {
   const [username, setUserName] = useState("");
   const [userData, setUserData] = useState([]);
   const [imageUrl, setImageUrl] = useState("");
+  const [userPersonalData, setUserPersonalData] = useState({});
 
   var input = document.getElementsByClassName(".input");
 
   const handleSubmit = (e) => {
     const url = makeUrl(username);
+    const urlForUser = makeUrlForUserInfo(username);
     e.preventDefault();
     fetch(url)
       .then((response) => response.json())
@@ -22,11 +24,20 @@ const Search = () => {
         // console.log(userData);
       })
       .catch((err) => console.log(err));
+    fetch(urlForUser)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setUserPersonalData(data);
+      });
     setUserName("");
   };
 
   const makeUrl = (a) => {
     return `https://api.github.com/users/${a}/repos`;
+  };
+  const makeUrlForUserInfo = (a) => {
+    return `https://api.github.com/users/${a}`;
   };
 
   return (
@@ -49,7 +60,11 @@ const Search = () => {
           <FontAwesomeIcon icon={faSearch} size="6x" />
         </div>
       ) : (
-        <DataUi dataFetched={userData} image={imageUrl} />
+        <DataUi
+          dataFetched={userData}
+          image={imageUrl}
+          personalData={userPersonalData}
+        />
       )}
     </div>
   );
