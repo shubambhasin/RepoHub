@@ -31,6 +31,9 @@
   color: #ffffff;
   font-weight: bold;
 }
+.links:hover {
+  text-decoration: underline;
+}
 .repo-info {
   display: flex;
   width: 100%;
@@ -43,4 +46,10 @@
 .repo-info p,
 a {
   text-align: center;
+}
+
+.avatar {
+  margin-top: 20px;
+  border-radius: 50%;
+  border: 10px solid #ffbfcc;
 }

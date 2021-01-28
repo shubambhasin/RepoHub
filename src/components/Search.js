@@ -7,6 +7,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 const Search = () => {
   const [username, setUserName] = useState("");
   const [userData, setUserData] = useState([]);
+  const [imageUrl, setImageUrl] = useState("");
 
   var input = document.getElementsByClassName(".input");
 
@@ -16,6 +17,7 @@ const Search = () => {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
+        setImageUrl(data[0].owner.avatar_url);
         setUserData(data);
         // console.log(userData);
       })
@@ -47,7 +49,7 @@ const Search = () => {
           <FontAwesomeIcon icon={faSearch} size="6x" />
         </div>
       ) : (
-        userData.map((data) => <DataUi dataFetched={data} key={data.id} />)
+        <DataUi dataFetched={userData} image={imageUrl} />
       )}
     </div>
   );
