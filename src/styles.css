@@ -10,3 +10,9 @@ body {
   text-shadow: 1px;
   width: auto;
 }
+
+footer {
+  margin: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}

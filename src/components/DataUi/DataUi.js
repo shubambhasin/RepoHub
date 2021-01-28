@@ -1,9 +1,15 @@
 import React from "react";
 import "../DataUi/DataUi.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye, faCodeBranch } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEye,
+  faCodeBranch,
+  faKiwiBird
+} from "@fortawesome/free-solid-svg-icons";
 
 const DataUi = (props) => {
+  let projectUrl = props.projectUrl;
+
   return (
     <div>
       <div className="avatar-info">
@@ -25,10 +31,10 @@ const DataUi = (props) => {
           </div>
           <p>
             <strong>Bio : </strong>
-            {props.personalData.bio}
+            <em> {props.personalData.bio}</em>
           </p>
           <p>
-            <strong>Twitter : </strong>
+            <strong>Twitter :</strong>
             <a
               className="links"
               href={`https://twitter.com/${props.personalData.twitter_username}`}
@@ -70,6 +76,12 @@ const DataUi = (props) => {
                   </span>
                 </div>
                 <p>{props.description}</p>
+                {/* for link to the hosted project url  */}
+                {props.homepage !== "" ? (
+                  <a href={props.homepage}>Click to visit project</a>
+                ) : (
+                  <p>No Links Added</p>
+                )}
               </div>
             </div>
           </div>

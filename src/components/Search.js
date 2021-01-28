@@ -27,7 +27,6 @@ const Search = () => {
     fetch(urlForUser)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setUserPersonalData(data);
       });
     setUserName("");

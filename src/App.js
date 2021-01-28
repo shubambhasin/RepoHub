@@ -11,6 +11,13 @@ export default function App() {
       </p>
 
       <Search />
+
+      <footer className="footer">
+        Mainained by{" "}
+        <a className="links" href="https:github.com/shubambhasin">
+          Shubam Bhasin{" "}
+        </a>
+      </footer>
     </div>
   );
 }
