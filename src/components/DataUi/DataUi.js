@@ -78,7 +78,9 @@ const DataUi = (props) => {
                 <p>{props.description}</p>
                 {/* for link to the hosted project url  */}
                 {props.homepage !== "" ? (
-                  <a href={props.homepage}>Click to visit project</a>
+                  <a href={props.homepage} className="links">
+                    Click to visit project
+                  </a>
                 ) : (
                   <p>No Links Added</p>
                 )}
