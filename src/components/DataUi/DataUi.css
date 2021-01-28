@@ -47,9 +47,82 @@
 a {
   text-align: center;
 }
+.avatar-info {
+  display: block;
+  margin: auto;
+  width: 80%;
+}
 
+.avatar-info-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar-info-info strong {
+  color: #ffa7b9;
+}
+.follow {
+  display: flex;
+  gap: 10px;
+}
 .avatar {
   margin-top: 20px;
   border-radius: 50%;
   border: 10px solid #ffbfcc;
+  width: 200px;
+  width: 200px;
+}
+
+/* *********************media queries********************** */
+
+@media (max-width: 800px) {
+  .ui-container {
+    width: 90%;
+  }
+}
+@media (max-width: 600px) {
+  .ui-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  .avatar-info-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+}
+@media (max-width: 400px) {
+  .input {
+    width: 150px;
+  }
+  .avatar {
+    width: 70%;
+    border: 7px solid #ffbfcc;
+  }
+  .ui-container {
+    width: 95%;
+  }
+  .avatar-info {
+    width: 80%;
+  }
+}
+@media (max-width: 300px) {
+  .input {
+    margin: 2px;
+    border-radius: 5px;
+    font-size: 10px;
+  }
+  button {
+    font-size: 10px;
+  }
+
+  .avatar {
+    width: 70%;
+    border: 5px solid #ffbfcc;
+  }
 }
