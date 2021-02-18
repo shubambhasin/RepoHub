@@ -13,7 +13,7 @@ export default function App() {
       <Search />
 
       <footer className="footer">
-        Mainained by{" "}
+        Maintained by{" "}
         <a className="links" href="https:github.com/shubambhasin">
           Shubam Bhasin{" "}
         </a>
