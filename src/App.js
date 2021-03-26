@@ -14,7 +14,7 @@ export default function App() {
 
       <footer className="footer">
         Maintained by{" "}
-        <a className="links" href="https:github.com/shubambhasin">
+        <a className="links" href="https://github.com/shubambhasin">
           Shubam Bhasin{" "}
         </a>
       </footer>

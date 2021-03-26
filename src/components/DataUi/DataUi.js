@@ -4,11 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEye,
   faCodeBranch,
-  faKiwiBird
+
 } from "@fortawesome/free-solid-svg-icons";
 
 const DataUi = (props) => {
-  let projectUrl = props.projectUrl;
+ 
 
   return (
     <div>
